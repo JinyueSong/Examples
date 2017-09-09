@@ -15,8 +15,6 @@ public class DirectoryListingExample {
                 // process the file
                 System.out.println(file);
             }
-            // Alternatively, you can do:
-            // filesList.forEach(System.out::println);
         }
        catch (IOException e) {
            System.out.println("Could not print the contents of the following folder: " + directory);
