@@ -1,12 +1,10 @@
 package fileio;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
+/** The class demonstrates how to use classes Path and Files to access various attributes of files and folders.
+ *  Based on the example of Prof. Engle. */
 public class PathExample {
 
     public static void printPathInfo(Path path) {
