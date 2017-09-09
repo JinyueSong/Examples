@@ -1,10 +1,6 @@
 package fileio;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.FileReader;
-import java.io.PrintWriter;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,15 +12,16 @@ import java.util.stream.Stream;
 public class FileIOExample {
     public static void main(String[] args) {
 
-       // readUsingBufferedReader("dir/lyrics.txt");
+        readUsingBufferedReader("dir/lyrics.txt");
         // readUsingNewBufferedReader("dir/lyrics.txt");
 
         //readUsingStreams("dir/lyrics.txt");
-        readWrite("dir/lyrics.txt", "dir/output.txt");
+        // readWrite("dir/lyrics.txt", "dir/output.txt");
     }
 
     /** Use Files.newBufferedReader to read every line from the given file
      *  and print it to the console.
+     *  You need to know the encoding of the file you are reading (UTF-8 in this case).
      */
     public static void readUsingNewBufferedReader(String filename) {
         Path path = Paths.get(filename);
@@ -39,8 +36,11 @@ public class FileIOExample {
     }
 
 
+    /** Wrap InputStreamReader in a BufferedReader.
+     *  Read lines from the file and output each line to the console.
+     *  Note that you can also pass FileReader to the BufferedReader, but FileReader does not allow to specify Charset.*/
     public static void readUsingBufferedReader(String filename) {
-        try (BufferedReader  reader = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader  reader = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "UTF-8"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
@@ -55,7 +55,8 @@ public class FileIOExample {
         }
     }
 
-    /** Use Java 8 streams to read from the file */
+    /** Use Java 8 streams to read from the file.
+     *  Will talk more about Java 8 features at the end of the semester. */
    public static void readUsingStreams(String fileName) {
        Path path = Paths.get(fileName);
         try (Stream<String> stream = Files.lines(path)) {
@@ -66,6 +67,7 @@ public class FileIOExample {
             e.printStackTrace();
         }
     }
+
 
     /** Read from one file and write to another */
     public static void readWrite(String inputFile, String outputFile) {
@@ -83,5 +85,7 @@ public class FileIOExample {
         }
 
     }
+
+
 
 }
