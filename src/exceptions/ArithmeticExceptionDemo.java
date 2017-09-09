@@ -21,7 +21,7 @@ public class ArithmeticExceptionDemo {
     public static void main(String[] args) {
 
         // divide(5, 0);
-        divideHandleException(5, 2);
+        divideHandleException(5, 0);
 
     }
 }
