@@ -1,5 +1,8 @@
 package exceptions;
 
+/** Demonstrates what happens when an Arithmetic exception occurs (first in the method where it is not caught,
+ * then in the method that has try/catch
+ */
 public class ArithmeticExceptionDemo {
 
     public static double divide(int a, int b) {
@@ -15,13 +18,12 @@ public class ArithmeticExceptionDemo {
         } finally {
             System.out.println("Executed the finally block.");
         }
-
     }
 
     public static void main(String[] args) {
 
-        // divide(5, 0);
-        divideHandleException(5, 0);
+        divide(5, 0); // the program will crash
+        //divideHandleException(5, 2); // uncomment this one instead to see that the program will not crash
 
     }
 }

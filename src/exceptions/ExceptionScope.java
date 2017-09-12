@@ -1,17 +1,15 @@
 package exceptions;
 
 
-//********************************************************************
-//ExceptionScope.java       Author: Lewis/Loftus
-//
-//Demonstrates exception propagation.
-//********************************************************************
-
+/** ExceptionScope.java
+ *  Author: Lewis/Loftus, Java software solutions.
+ *  Demonstrates exception propagation.
+ */
 public class ExceptionScope
 {
     //-----------------------------------------------------------------
-//  Catches and handles the exception that is thrown in level3.
-//-----------------------------------------------------------------
+    //  Catches and handles the exception that is thrown in level3.
+    //-----------------------------------------------------------------
     public void level1()
     {
         System.out.println("Level 1 beginning.");
@@ -33,9 +31,9 @@ public class ExceptionScope
     }
 
     //-----------------------------------------------------------------
-//  Serves as an intermediate level.  The exception propagates
-//  through this method back to level1.
-//-----------------------------------------------------------------
+    //  Serves as an intermediate level.  The exception propagates
+    //  through this method back to level1.
+    //-----------------------------------------------------------------
     public void level2()
     {
         System.out.println("Level 2 beginning.");
@@ -44,9 +42,9 @@ public class ExceptionScope
     }
 
     //-----------------------------------------------------------------
-//  Performs a calculation to produce an exception.  It is not
-//  caught and handled at this level.
-//-----------------------------------------------------------------
+    //  Performs a calculation to produce an exception.  It is not
+    //  caught and handled at this level.
+    //-----------------------------------------------------------------
     public void level3()
     {
         int numerator = 10, denominator = 0;

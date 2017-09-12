@@ -1,16 +1,14 @@
 package exceptions;
 
-//********************************************************************
-//Propagation.java       Author: Lewis/Loftus
-//
-//Demonstrates exception propagation.
-//********************************************************************
-
+/** Propagation.java
+ * Author: Lewis/Loftus, Java software solutions.
+ * Demonstrates exception propagation.
+ */
 public class Propagation
 {
     //-----------------------------------------------------------------
-//  Invokes the level1 method to begin the exception demonstation.
-//-----------------------------------------------------------------
+    //  Invokes the level1 method to begin the exception demonstration.
+    //-----------------------------------------------------------------
     static public void main(String[] args)
     {
         ExceptionScope demo = new ExceptionScope();
