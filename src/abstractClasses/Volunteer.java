@@ -1,4 +1,5 @@
-package abstractClasses;//********************************************************************
+package abstractClasses;
+//********************************************************************
 //  Volunteer.java       Author: Lewis/Loftus
 //
 //  Represents a staff member that works as a volunteer.

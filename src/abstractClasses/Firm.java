@@ -1,7 +1,8 @@
-package abstractClasses;//********************************************************************
+package abstractClasses;
+//********************************************************************
 //  Firm.java       Author: Lewis/Loftus
 //
-//  Demonstrates polymorphism via inheritance.
+//  Demonstrates the use of an abstract class, polymorphism via inheritance.
 //********************************************************************
 
 public class Firm

@@ -1,4 +1,5 @@
-package abstractClasses;//********************************************************************
+package abstractClasses;
+//********************************************************************
 //  Executive.java       Author: Lewis/Loftus
 //
 //  Represents an executive staff member, who can earn a bonus.

@@ -6,9 +6,9 @@ package abstractClasses;//******************************************************
 
 abstract public class StaffMember
 {
-   protected String name;
-   protected String address;
-   protected String phone;
+   private String name;
+   private String address;
+   private String phone;
 
    //-----------------------------------------------------------------
    //  Constructor: Sets up this staff member using the specified

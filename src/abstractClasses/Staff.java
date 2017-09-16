@@ -1,4 +1,5 @@
-package abstractClasses;//********************************************************************
+package abstractClasses;
+//********************************************************************
 //  Staff.java       Author: Lewis/Loftus
 //
 //  Represents the personnel staff of a particular business.

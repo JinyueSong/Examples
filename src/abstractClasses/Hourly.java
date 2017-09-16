@@ -34,7 +34,7 @@ public class Hourly extends Employee
    //-----------------------------------------------------------------
    public double pay()
    {
-      double payment = payRate * hoursWorked;
+      double payment = getPayRate() * hoursWorked;
 
       hoursWorked = 0;
 
@@ -48,7 +48,7 @@ public class Hourly extends Employee
    {
       String result = super.toString();
 
-      result += "\nCurrent hours: " + hoursWorked;
+      result += System.lineSeparator() + "Current hours: " + hoursWorked;
 
       return result;
    }

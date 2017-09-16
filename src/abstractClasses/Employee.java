@@ -1,4 +1,5 @@
-package abstractClasses;//********************************************************************
+package abstractClasses;
+//********************************************************************
 //  Employee.java       Author: Lewis/Loftus
 //
 //  Represents a general paid employee.
@@ -6,8 +7,8 @@ package abstractClasses;//******************************************************
 
 public class Employee extends StaffMember
 {
-   protected String socialSecurityNumber;
-   protected double payRate;
+   private String socialSecurityNumber;
+   private double payRate;
    
    //-----------------------------------------------------------------
    //  Constructor: Sets up this employee with the specified
@@ -22,6 +23,11 @@ public class Employee extends StaffMember
       payRate = rate;
    }
 
+   /** A getter method for payRate - will be used in Hourly */
+   public double getPayRate() {
+      return payRate;
+   }
+
    //-----------------------------------------------------------------
    //  Returns information about an employee as a string.
    //-----------------------------------------------------------------
@@ -29,7 +35,7 @@ public class Employee extends StaffMember
    {
       String result = super.toString();
 
-      result += "\nSocial Security Number: " + socialSecurityNumber;
+      result += System.lineSeparator() + "Social Security Number: " + socialSecurityNumber;
 
       return result;
    }
