@@ -4,7 +4,8 @@ package junit;
 import java.security.InvalidParameterException;
 
 /** The class that "registers" a user with the given username.
- *  Has a method to validate a given username. 
+ *  Has a method to validate a given username.
+ *  I believe this example was modified from the example of Pr. Engle.
  */
 public class UserRegistration {
 	private String username;
