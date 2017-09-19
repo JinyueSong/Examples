@@ -47,7 +47,8 @@ public class UserRegistrationTest {
 	public void validateUsernameFirstCharNotLowerCase() {
 		assertFalse(UserRegistration.validateUsername("User_Name7"));
 	}
-	
+
+	@Test
 	public void validateUsernameValidName() {
 		assertTrue(UserRegistration.validateUsername("user_01"));
 	}

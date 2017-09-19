@@ -22,13 +22,13 @@ public class UserRegistration {
 	/**
 	 * Validates a given username.
 	 * 
-	 * @param String
+	 * @param username
 	 *            username
 	 * @return true if a given username is valid, false otherwise
 	 */
 	public static boolean validateUsername(String username) {
 		// For the purpose of this example, a username is valid if:
-		// 1) It consists of at least 5 characters, but no more than 10
+		// 1) It consists of at least 5 characters, but no more than 20
 		// 2) Starts with a lowercase character
 		// 3) Contains an underscore and a digit
 		if (username == null) {
@@ -41,7 +41,7 @@ public class UserRegistration {
 		char ch = username.charAt(0);
 		if (l < 5 || l > 20 || !Character.isLowerCase(ch)) {
 			System.out.println("Select a username that is >=5 and <=100  letters long. "
-					+ "\n Also the first character should be lowercase.");
+					+ System.lineSeparator() + " Also the first character should be lowercase.");
 			return false;
 		}
 		boolean foundDigit = false;

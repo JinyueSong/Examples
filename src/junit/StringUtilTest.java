@@ -3,6 +3,8 @@ package junit;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -14,7 +16,7 @@ import org.junit.Test;
  *  Please note that the tests below do not cover all the edge cases you should test.
  */
 public class StringUtilTest {
-	
+
 	@Test
 	public void testTrimConcatenate() {
 		String res = StringUtil.trimConcatenate(" hell  o ", " wor, ld  ");
