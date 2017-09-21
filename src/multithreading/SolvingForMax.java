@@ -38,7 +38,7 @@ public class SolvingForMax {
 	public static void main(String[] args) {
 		double [][] bigMatrix = generateBigMatrix(NUM_ROWS, 1000000);
 		
-		WorkerThread[] threads = new WorkerThread[bigMatrix.length];
+		Thread[] threads = new WorkerThread[bigMatrix.length];
 		double max = Double.MIN_VALUE;
 
 		// Give each thread a row of the matrix to work with
@@ -51,7 +51,7 @@ public class SolvingForMax {
 		try {
 			for (int i = 0; i < NUM_ROWS; i++) {
 				threads[i].join();
-				max = Math.max(max, threads[i].getMax());
+				max = Math.max(max, ((WorkerThread)threads[i]).getMax());
 			}
 		} catch (InterruptedException e) {
 			System.out.println("The thread was interrupted. ");
