@@ -1,19 +1,24 @@
 package multithreading;
-/** The class demonstrates how race condition occurs, when we have no synchronization.
- *  This is an example of how NOT to write multithreaded programs. */
-public class NoSynchronization {
+/**  Based on NoSynchronization example, but in this one, x will always be 0,
+ *   because x++ and x-- are in synchronized blocks (so the problems of atomicity and visibility are solved). */
+public class WithSynchronization {
 	private int x = 0;
+	private Object lock  = new Object();
 
 	private class AdditionTask implements Runnable {
 		public void run() {
-			x++;
+			synchronized(lock) {
+				x++;
+			}
 		}
 
 	}
 
 	private class SubtractionTask implements Runnable {
 		public void run() {
-			x--;
+			synchronized(lock) {
+				x--;
+			}
 		}
 	}
 
@@ -31,7 +36,7 @@ public class NoSynchronization {
 	}
 
 	public static void main(String[] args)  {
-		NoSynchronization ns = new NoSynchronization();
+		WithSynchronization ns = new WithSynchronization();
 		try {
 			for (int i = 0; i < 1000000; i++) {
 				ns.createThreads();
