@@ -21,7 +21,8 @@ public class MyOuter {
     public static void main(String[] args) {
         MyOuter outer = new MyOuter();
         outer.printX();
-        MyInner inner  = outer.new MyInner();
+        MyOuter.MyInner inner  = outer.new MyInner();
+        // MyInner inner  = outer.new MyInner(); // since this code is inside MyOuter, this would also work
         inner.printX();
     }
 }
