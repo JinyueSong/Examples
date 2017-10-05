@@ -1,5 +1,6 @@
 package generics;
 
+import java.util.*;
 /** An example of a parameterized class Box
  *  mentioned in the lecture notes (courtesy of Anupam Chanda)
  */
@@ -40,6 +41,7 @@ public class Box<T> {
 		Box<?> b2 = new Box<String>("Hi"); // valid
 		b1 = b2; // valid
 		*/
+
 
 	}
 }
