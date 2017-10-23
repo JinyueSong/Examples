@@ -1,6 +1,6 @@
 package lectureInterfaces;
 
-/** Example of how a class can implement Comparable interface */
+/** OuterClass of how a class can implement Comparable interface */
 public class Student  implements Comparable<Student> {
     final static double EPS = 0.0001;
 

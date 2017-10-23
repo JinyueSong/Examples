@@ -20,10 +20,10 @@ import org.eclipse.jetty.servlet.ServletHandler;
  */
 public class SimpleHelloServer {
 
-	public static final int PORT = 8080;
+	public static final int PORT = 8081;
 
 	public static void main(String[] args) throws Exception {
-		Server server = new Server(8081);
+		Server server = new Server(PORT);
 
 		ServletHandler handler = new ServletHandler();
 

@@ -7,6 +7,7 @@ public class PrintTask implements Runnable {
 		this.n = n;
 	}
 	public void run() {
+
 		for (int i = 0; i < n; i++) {
 			System.out.println(Thread.currentThread().getName() + "  " + i + " ");
 		}

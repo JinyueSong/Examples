@@ -44,7 +44,7 @@ public class WildCardsExample {
         list1.add(new Circle(4.0f));
         list1.add(new Circle(0.6f));
 
-        // iterateOverList1(list1); // This will not compile. List<Object> is not a parent of List<Circle>
+        //iterateOverList1(list1); // This will not compile. List<Object> is not a parent of List<Circle>
         iterateOverList2(list1);  // Compiles and runs. List<?> is a parent of List<Circle>
         iterateOverCircles(list1); // Compiles and runs
 

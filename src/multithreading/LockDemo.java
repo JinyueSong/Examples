@@ -4,7 +4,7 @@ package multithreading;
  * @author Prof. Engle 
  * 	       This class demonstrates the impact different types of
  *         lock objects have on whether multiple threads may run synchronized
- *         blocks of code simultaneously. Example is courtesy of Prof. Engle.
+ *         blocks of code simultaneously. OuterClass is courtesy of Prof. Engle.
  */
 public class LockDemo {
 

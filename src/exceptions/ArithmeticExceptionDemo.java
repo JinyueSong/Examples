@@ -22,8 +22,8 @@ public class ArithmeticExceptionDemo {
 
     public static void main(String[] args) {
 
-        divide(5, 0); // the program will crash
-        //divideHandleException(5, 2); // uncomment this one instead to see that the program will not crash
+        //divide(5, 0); // the program will crash
+        divideHandleException(5, 0); // uncomment this one instead to see that the program will not crash
 
     }
 }

@@ -25,7 +25,9 @@ public class OuterClass {
 
     public static void main(String[] args) {
         OuterClass ex = new OuterClass(5);
-        OuterClass.InnerClass inner = ex.new InnerClass("hello");
+        InnerClass inner = ex.new InnerClass("Hello");
+
+        //OuterClass.InnerClass inner = ex.new InnerClass("hello");
         System.out.println(inner.toString());
         System.out.println(ex.toString());
 

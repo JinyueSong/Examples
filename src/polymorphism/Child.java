@@ -1,6 +1,6 @@
 package polymorphism;
 /**
- * Example shows how static methods can not be overriden, just hidden.
+ * OuterClass shows how static methods can not be overriden, just hidden.
  * Modified from :
  * http://stackoverflow.com/questions/2223386/why-doesnt-java-allow-overriding-
  * of-static-methods

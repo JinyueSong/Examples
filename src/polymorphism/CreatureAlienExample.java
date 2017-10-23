@@ -1,9 +1,9 @@
 package polymorphism;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
- * The Example that demonstrates overriding and polymorphism. Requires classes Creature, Human and
+ * The OuterClass that demonstrates overriding and polymorphism. Requires classes Creature, Human and
  * Alien.
  */
 
@@ -29,6 +29,11 @@ public class CreatureAlienExample {
 				((Alien)cr).fight(); // need to downcast, since fight() is not in Creature class
 
 		}
+
+		Creature c1 = new MarsAlien("HI");
+		MarsAlien fromMars = (MarsAlien)c1;
+		fromMars.speak();
+
 	}
 
 }

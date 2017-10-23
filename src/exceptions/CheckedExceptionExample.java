@@ -14,7 +14,7 @@ import java.nio.file.Paths;
  */
 public class CheckedExceptionExample {
     public static void main(String[] args) {
-        readUsingNewBufferedReader("dir/lyrics1.txt");
+        readUsingNewBufferedReader("dir/lyrics.txt");
 
     }
 
@@ -30,9 +30,9 @@ public class CheckedExceptionExample {
                 System.out.println(line);
             }
         } catch (IOException e) {
-            System.out.println("Could not read from the file: " + filename);
+            System.out.println("IOException"); //Could not read from the file: " + filename);
         } catch (Exception e) {
-            System.out.println("Some exception occured : " + e);
+            System.out.println("Exception"); //Some exception occured : " + e);
 
         }
     }

@@ -1,6 +1,6 @@
 package lectureInterfaces;
 
-/** Example showing an interface with a default method */
+/** OuterClass showing an interface with a default method */
 interface Speak {
     public void say(String greeting);
 
