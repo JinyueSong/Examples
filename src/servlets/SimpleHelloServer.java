@@ -29,7 +29,7 @@ public class SimpleHelloServer {
 
 		// when the user goes to http://localhost:8080/hello, the get request is
 		// going to go to a SimpleHelloServlet
-		handler.addServletWithMapping(SimpleHelloServlet.class, "/hello");
+		handler.addServletWithMapping(SimpleHelloServlet.class, "/welcome");
 		//handler.addServletWithMapping(SimpleByeServlet.class, "/bye");
 
 		server.setHandler(handler);

@@ -19,7 +19,7 @@ public class SimpleHelloServlet extends HttpServlet {
 			HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html");
+		//response.setContentType("text/html");
 		response.setStatus(HttpServletResponse.SC_OK);
 
 		PrintWriter out = response.getWriter();

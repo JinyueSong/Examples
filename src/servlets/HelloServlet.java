@@ -47,7 +47,7 @@ public class HelloServlet extends HttpServlet {
 
 		// You can comment out this line: name = StringEscapeUtils.escapeHtml4(name);
 		// and uncomment the line below to disable security feature in the browser
-		// response.setIntHeader("X-XSS-Protection", 0);
+		//response.setIntHeader("X-XSS-Protection", 0);
 		// Then in the browser, try specifying the text below instead of the name:
 		// ?name=<script>window.open("http://www.usfca.edu/");</script>
 		// Did you see what happened? This script opened another page with usfca.edu website!
